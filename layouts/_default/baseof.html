@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Locale }}">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ .Title }} · {{ .Site.Title }}</title>
+    </head>
+    <body>
+        {{ partial "nav.html" . }}
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+    </body>
+</html>

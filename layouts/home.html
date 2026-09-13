@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+  <section>
+    <h2>About</h2>
+    {{ with .Site.GetPage "about" }}
+      {{ .Content }}
+    {{ end }}
+  </section>
+
+  <section>
+    <h2>Posts</h2>
+    <ul>
+      {{ with .Site.GetPage "posts" }}
+        {{ range .RegularPages }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "January 2, 2006" }}
+          </li>
+        {{ end }}
+      {{ end }}
+    </ul>
+  </section>
+
+{{ end }}

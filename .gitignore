@@ -1,0 +1,11 @@
+# Hugo build output
+public/
+
+# Hugo build lock
+.hugo_build.lock
+
+# Generated resources (from assets/)
+resources/
+
+# Local Claude Code settings
+.claude/settings.local.json
